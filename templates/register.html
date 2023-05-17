@@ -1,0 +1,41 @@
+<!-- 繼承模板 base.html -->
+{% extends 'base.html' %}
+
+<!-- title -->
+{% block title %}
+註冊
+{% endblock %}
+
+<!-- 內容 -->
+{% block content %}
+<div class="position-absolute top-50 start-50 translate-middle w-50">
+    <div class="border border-secondary p-5 rounded-3">
+        <h1>註冊</h1>
+        {% if error %}
+            <p style="color: red;">{{error}}</p>
+        {% else %}
+
+        {% endif %}
+        <form method="POST">
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="Password1" class="form-label">密碼</label>
+                <input type="password" class="form-control" id="Password1" name="pwd">
+            </div>
+            <div class="mb-3">
+                <label for="Password2" class="form-label">確認密碼</label>
+                <input type="password" class="form-control" id="Password2" name="che_pwd">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <div id="emailHelp" class="form-text"><a href="{{ url_for('login') }}">已有帳號?</a></div>
+        </form>
+    </div>
+</div>
+{% endblock %}

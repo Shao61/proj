@@ -1,0 +1,24 @@
+<!-- 繼承模板 base.html -->
+{% extends 'base.html' %}
+
+<!-- title -->
+{% block title %}
+用戶中心
+{% endblock %}
+
+<!-- 內容 -->
+{% block content %}
+<div class="container my-5">
+    <h1>歡迎 {{user}}</h1>
+    <div class="row">
+        <div class="col border border-secondary p-3 rounded-3 ">
+
+        </div>
+        <div class="col">
+            <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, fugiat tempora saepe aliquam, voluptatem pariatur dolorem cum ea illo placeat, velit excepturi dignissimos magni deserunt odit magnam. Quibusdam, tenetur sit.</p>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}

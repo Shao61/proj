@@ -1,0 +1,34 @@
+<!-- 繼承模板 base.html -->
+{% extends 'base.html' %}
+
+<!-- title -->
+{% block title %}
+登入
+{% endblock %}
+
+<!-- 內容 -->
+{% block content %}
+<div class="position-absolute top-50 start-50 translate-middle w-50">
+    <div class="border border-secondary p-5 rounded-3">
+        <h1>登入</h1>
+        {% if error %}
+            <p style="color: red;">{{error}}</p>
+        {% else %}
+
+        {% endif %}
+        <form method="POST">
+            <div class="mb-3">
+                <label for="Email1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp" name="email">
+                <div id="emailHelp" class="form-text">請輸入靜宜大學帳號</div>
+            </div>
+            <div class="mb-3">
+                <label for="Password1" class="form-label" >密碼</label>
+                <input type="password" class="form-control" id="Password1" name="pwd">
+            </div>
+            <button type="submit" class="btn btn-primary ">登入</button>
+            <div id="emailHelp" class="form-text"><a href="{{ url_for('register') }}">尚未註冊?</a></div>
+        </form>
+    </div>
+</div>
+{% endblock %}

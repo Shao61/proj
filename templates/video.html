@@ -1,0 +1,39 @@
+<!-- 繼承模板 base.html -->
+{% extends 'base.html' %}
+
+<!-- title -->
+{% block title %}
+video
+{% endblock %}
+
+<!-- 內容 -->
+{% block content %}
+<div class="container px-5">
+    <div class="ratio ratio-16x9">
+        <iframe src="{{video[3]}}" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </div>
+    <div>
+        <h2 class="m-3">留言</h2>
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 text-primary-emphasis">@靜宜大帥哥</h5>
+                <small class="text-body-secondary">3 hour ago</small>
+              </div>
+              <p class="mb-1">讚讚不錯不錯</p>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 text-primary-emphasis">@靜宜周杰倫</h5>
+                <small class="text-body-secondary">3 days ago</small>
+              </div>
+              <p class="mb-1">哈哈</p>
+            </a>
+          </div>
+    </div>
+</div>
+
+
+{% endblock %}
